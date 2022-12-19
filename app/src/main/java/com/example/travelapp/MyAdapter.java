@@ -1,6 +1,7 @@
 package com.example.travelapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +18,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     Context context;
     ArrayList<WondersInfo> wondersInfoArrayList;
+    private onWonderClickListener listener;
 
-    public MyAdapter(Context context, ArrayList<WondersInfo> wondersInfoArrayList) {
+    public interface onWonderClickListener{
+        void onWonderClick(int position);
+    }
+
+    public MyAdapter(Context context, ArrayList<WondersInfo> wondersInfoArrayList, onWonderClickListener listener) {
         this.context = context;
         this.wondersInfoArrayList = wondersInfoArrayList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -36,6 +43,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         WondersInfo wondersInfo = wondersInfoArrayList.get(position);
         holder.tvHeading.setText(wondersInfo.heading);
         holder.titleImage.setImageResource(wondersInfo.titleImage);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, MainActivity2.class);
+                intent.putExtra("position", position);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
