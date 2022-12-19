@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Travel App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="head_1">The Roman Colosseum</string>
+    <string name="head_2">The Great Wall of China</string>
+    <string name="head_3">The Taj Mahal</string>
+    <string name="head_4">Christ the Redeemer</string>
+    <string name="head_5">Machu Picchu</string>
+    <string name="head_6">Chicén Itzá</string>
+    <string name="head_7">Petra</string>
+
 </resources>
