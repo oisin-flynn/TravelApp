@@ -56,7 +56,7 @@ public class MainActivity2 extends AppCompatActivity {
         if (extras != null) {
             //The key argument here must match that used in the other activity
             int id = extras.getInt("position");
-            img.setImageResource(myImages.get(id));
+            img.setBackgroundResource(myImages.get(id));
             txt.setText(myTitles.get(id));
             description.setText(myDescs.get(id));
         }
