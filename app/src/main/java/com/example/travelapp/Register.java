@@ -16,8 +16,22 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+
+ This is an adapter class for a RecyclerView used to display a list of WondersInfo objects.
+ It specifies the layout for each item in the list and what happens when an item is clicked.
+ The context and an ArrayList of WondersInfo objects are passed in as arguments to the constructor.
+ The context is used to create an Intent for starting a new activity when an item is clicked.
+ The ArrayList of WondersInfo objects is used to populate the list with data.
+ The onCreateViewHolder method inflates the layout for each item in the list and returns a
+ MyViewHolder object.
+ The onBindViewHolder method sets the heading TextView and the title image ShapeableImageView
+ for each item in the list based on the data in the corresponding WondersInfo object. It also
+ sets an OnClickListener for each item in the list that starts a new activity when an item is clicked.
+ The getItemCount method returns the size of the ArrayList of WondersInfo objects.
+ The MyViewHolder inner class holds the Views for each item in the list.
+ */
 public class Register extends AppCompatActivity {
-    // create object of DatabaseReference class to access firebase's Realtime Database
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://travelapp-2abe1-default-rtdb.firebaseio.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +51,17 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                // get data from EditTexts into string variables
                 final String fullnameTxt = fullname.getText().toString();
                 final String emailTxt = email.getText().toString();
                 final String phoneTxt = phone.getText().toString();
                 final String passwordTxt = password.getText().toString();
                 final String conPasswordTxt = conPassword.getText().toString();
 
-                // check is user fills all fields before sending data to firebase
                 if(fullnameTxt.isEmpty() || emailTxt.isEmpty() || phoneTxt.isEmpty() || passwordTxt.isEmpty()){
                     Toast.makeText(Register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 }
 
-                // check is passwords are matching with each other
-                // if not matching with each other then show a toast message
+
                 else if(!passwordTxt.equals(conPasswordTxt)){
                     Toast.makeText(Register.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
                 }
@@ -60,20 +71,16 @@ public class Register extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                            // check if phone is not registered before
                             if (snapshot.hasChild(phoneTxt)){
                                 Toast.makeText(Register.this, "My phone is already registered", Toast.LENGTH_SHORT).show();
                             }
 
                             else {
-                                // sending data to firebase Realtime Database
-                                // we are using phone number as unique identifier of every user
-                                // so all the details of users comes under phone number
+
                                 databaseReference.child("users").child(phoneTxt).child("fullname").setValue(fullnameTxt);
                                 databaseReference.child("users").child(phoneTxt).child("email").setValue(emailTxt);
                                 databaseReference.child("users").child(phoneTxt).child("password").setValue(passwordTxt);
 
-                                // show a success message then finish the activity
                                 Toast.makeText(Register.this, "User registered successfully", Toast.LENGTH_SHORT).show();
                                 finish();
                             }

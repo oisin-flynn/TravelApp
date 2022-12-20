@@ -23,12 +23,15 @@ public class MainActivity3 extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         ViewPager viewPager = findViewById(R.id.viewPager);
 
+        // Set up the tab layout with the view page
         tabLayout.setupWithViewPager(viewPager);
 
+        // Create a new VPAdapter and add fragments to it
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new Fragment1(), "Home");
         vpAdapter.addFragment(new Fragment2(), "Explore");
         vpAdapter.addFragment(new Fragment3(), "About");
+        // Set the VPAdapter as the adapter for the view pager
         viewPager.setAdapter(vpAdapter);
 
 

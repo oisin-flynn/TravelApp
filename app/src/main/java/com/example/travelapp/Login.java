@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
 
+    // Initialize Firebase Realtime Database reference
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://travelapp-2abe1-default-rtdb.firebaseio.com/");
 
     @Override
@@ -31,40 +32,42 @@ public class Login extends AppCompatActivity {
         final Button loginBtn = findViewById(R.id.loginBtn);
         final TextView registerNowBtn = findViewById(R.id.registerNowBtn);
 
+        // Set up click listener for login button
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // Get phone and password entered by user
                 final String phoneTxt = phone.getText().toString();
                 final String passwordTxt = password.getText().toString();
 
+                // Check if phone or password field is empty
                 if(phoneTxt.isEmpty() || passwordTxt.isEmpty()){
+                    // Display toast message if either field is empty
                     Toast.makeText(Login.this, "Please enter your mobile or password", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    // Read from the "users" node in the database
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                            // check if phone exists in firebase database
+                            // Check if the phone number entered by the user exists in the databas
                             if (snapshot.hasChild(phoneTxt)){
-
-                                // mobile exists in firebase database
-                                // now get password of user from firebase data and match it with user entered password
+                                // Get the password for the phone number from the database
                                 final String getPassword = snapshot.child(phoneTxt).child("password").getValue(String.class);
-
+                                // Compare the password entered by the user to the password in the database
                                 if (getPassword.equals(passwordTxt)){
+                                    // Display toast message and redirect to main activity if password is correct
                                     Toast.makeText(Login.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
-                                    // open main activity
                                     startActivity(new Intent(Login.this, MainActivity3.class));
                                     finish();
                                 }
                                 else {
-                                    Toast.makeText(Login.this, "Wrong password", Toast.LENGTH_SHORT).show();
+                                    // Display toast message if password is incorrect
+                                    Toast.makeText(Login.this, "Incorrect password", Toast.LENGTH_SHORT).show();
                                 }
                             }
                             else {
-                                Toast.makeText(Login.this, "Wrong password", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Incorrect password", Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -76,11 +79,11 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
+        // Set up click listener for register button
         registerNowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // open register activity
+                // Navigate to register activity
                 startActivity(new Intent(Login.this, Register.class));
             }
         });

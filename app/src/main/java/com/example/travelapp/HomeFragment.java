@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment implements MyAdapter.onWonderClickLis
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Initialize the list data and set up the RecyclerView
         dataInitialize();
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment implements MyAdapter.onWonderClickLis
         myAdapter.notifyDataSetChanged();
     }
 
+    // Initialize the list data arrays and create WondersInfo objects for each item
     private void dataInitialize(){
         wonderArrayList = new ArrayList<>();
         wonderHeading = new String[]{
@@ -72,6 +74,7 @@ public class HomeFragment extends Fragment implements MyAdapter.onWonderClickLis
 
     }
 
+    // Handle click event on a list item
     @Override
     public void onWonderClick(int position) {
         Intent intent = new Intent(getActivity(), MainActivity2.class);
