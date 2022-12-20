@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Travel App</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
     <string name="head_1">The Roman Colosseum</string>
     <string name="head_2">The Great Wall of China</string>
@@ -33,10 +32,28 @@ The Taj Mahal is made of white marble and is set in formal gardens on the south 
 
 The Taj Mahal is a popular tourist destination and attracts millions of visitors each year. It is also a symbol of love and devotion, and it is often referred to as the "jewel of Muslim art in India."</string>
 
-    <string name="desc_4">x</string>
-    <string name="desc_5">x</string>
-    <string name="desc_6">x</string>
-    <string name="desc_7">x</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_4">Christ the Redeemer is a statue of Jesus Christ located in Rio de Janeiro, Brazil. It is considered one of the most iconic landmarks of the city, and is one of the most recognizable symbols of Brazil. The statue stands at the peak of the Corcovado mountain, overlooking the city and the Guanabara Bay. It stands at a height of 98 feet and is made of reinforced concrete, covered in soapstone tiles.\n\n
+
+The statue was designed by Brazilian engineer Heitor da Silva Costa, and was created by the French sculptor Paul Landowski. It was completed in 1931 and was officially inaugurated on October 12 of that year. Since then, it has become an important cultural and religious symbol for Brazil and a major tourist attraction in Rio de Janeiro.\n\n
+
+Christ the Redeemer is considered a cultural and religious symbol of Brazil, and is a major tourist attraction in Rio de Janeiro. It is visited by millions of people every year, who come to admire its beauty and to pay their respects to Jesus Christ. The statue is a popular spot for tourists to take photos, and it offers panoramic views of the city and the surrounding landscape. It is also a popular location for weddings and other special events.</string>
+    <string name="desc_5">Machu Picchu is an ancient Inca site located in the Andes Mountains of Peru. It is located on a mountain ridge at an altitude of 7,970 feet above sea level, and is surrounded by dense jungle. The site is believed to have been built in the mid-1400s, and served as a royal retreat for the Inca emperor Pachacuti. It was later abandoned, and remained hidden from the outside world until it was rediscovered in 1911 by the American historian Hiram Bingham.\n\n
+
+Machu Picchu is a UNESCO World Heritage site and is considered one of the most important archaeological sites in South America. It is a popular tourist destination, and is visited by thousands of people every year. The site is known for its well-preserved stone buildings, which were built using traditional Inca techniques. It is also known for its spectacular views of the surrounding landscape, which includes the Vilcanota River, the Andes Mountains, and the surrounding jungle.\n\n
+
+Machu Picchu is a unique and fascinating place, and is a must-see destination for anyone interested in history, archaeology, or nature. It offers a glimpse into the rich history and culture of the Inca civilization, and is a testament to the ingenuity and skill of the ancient people who built it.
+
+
+
+</string>
+    <string name="desc_6">Chichen Itza is an ancient Maya city located in the Yucatan Peninsula of Mexico. It was one of the largest and most important cities of the Maya civilization, and is known for its impressive architecture and well-preserved ruins. The city was founded in the 5th century AD and reached its peak of prosperity in the 9th and 10th centuries. It was abandoned in the 13th century, and was rediscovered by the Western world in the 19th century.\n\n
+
+Chichen Itza is a UNESCO World Heritage site and is considered one of the most important archaeological sites in the Americas. It is a popular tourist destination, and is visited by millions of people every year. The site is known for its many impressive structures, including the Temple of Kukulkan, a pyramid that was dedicated to the Maya feathered serpent deity. It is also known for its ball court, where the ancient Maya played a ball game that was a combination of soccer and basketball.\n\n
+
+Chichen Itza is a fascinating place that offers a glimpse into the rich history and culture of the Maya civilization. It is a must-see destination for anyone interested in history, archaeology, or culture, and is a testament to the ingenuity and skill of the ancient people who built it.</string>
+    <string name="desc_7">Petra is an ancient city located in modern-day Jordan. It was founded in the 4th century BC by the Nabataeans, an Arab people who made their home in the desert. The city is known for its impressive architecture, which was carved into the sandstone cliffs of the surrounding mountains. It is also known for its complex system of water channels, which allowed the city to thrive in a desert environment.\n
+
+Petra is a UNESCO World Heritage site and is considered one of the most important cultural and historical sites in the Middle East. It is a popular tourist destination, and is visited by thousands of people every year. The site is known for its many impressive structures, including the Treasury, a large temple that was carved into the cliff face. It is also known for its theater, which was built in the 1st century AD and could seat up to 3,000 people.\n
+
+Petra is a unique and fascinating place that offers a glimpse into the rich history and culture of the Nabataeans. It is a must-see destination for anyone interested in history, archaeology, or culture, and is a testament to the ingenuity and skill of the ancient people who built it.</string>
 </resources>

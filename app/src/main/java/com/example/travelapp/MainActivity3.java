@@ -26,21 +26,11 @@ public class MainActivity3 extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        vpAdapter.addFragment(new Fragment1(), "Tab 1");
+        vpAdapter.addFragment(new Fragment1(), "Home");
         vpAdapter.addFragment(new Fragment2(), "Tab 2");
         vpAdapter.addFragment(new Fragment2(), "Tab 3");
         viewPager.setAdapter(vpAdapter);
 
-
-
-//        btn = (Button)findViewById(R.id.btn1);
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(view.getContext(), MainActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
 
     }

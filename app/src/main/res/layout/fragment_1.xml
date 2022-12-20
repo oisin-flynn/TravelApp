@@ -5,20 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".Fragment1">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tab 1"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="40dp"
-        />
 
-<!--        <Button-->
-<!--            android:id="@+id/btn1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Home" />-->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Home" />
 
 
 </FrameLayout>
