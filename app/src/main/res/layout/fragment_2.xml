@@ -5,13 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".Fragment2">
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/colosseum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/giphy">
-    </ImageView>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/giphy" />
 
 
 </FrameLayout>
