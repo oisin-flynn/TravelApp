@@ -27,8 +27,8 @@ public class MainActivity3 extends AppCompatActivity {
 
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new Fragment1(), "Home");
-        vpAdapter.addFragment(new Fragment2(), "Tab 2");
-        vpAdapter.addFragment(new Fragment2(), "Tab 3");
+        vpAdapter.addFragment(new Fragment2(), "Explore");
+        vpAdapter.addFragment(new Fragment3(), "About");
         viewPager.setAdapter(vpAdapter);
 
 
