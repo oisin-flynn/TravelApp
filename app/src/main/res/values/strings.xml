@@ -37,4 +37,6 @@ The Taj Mahal is a popular tourist destination and attracts millions of visitors
     <string name="desc_5">x</string>
     <string name="desc_6">x</string>
     <string name="desc_7">x</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
